@@ -8,8 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="InputData\" />
-    <Folder Include="Solutions\" />
+    <Reference Include="SockulagsClassLibrary">
+      <HintPath>..\..\..\..\source\repos\SockulagsClassLibrary\bin\Debug\net8.0\SockulagsClassLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
