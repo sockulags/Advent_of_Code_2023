@@ -20,7 +20,7 @@ namespace Advent_of_Code_2023
 
         public static string Answer(int date, long part1Score, long part2Score = 0, long timeToSolve = 0)
         {
-            return $"[Day {date}] Part 1: {part1Score}, Part 2: {part2Score}, Time to solve: {timeToSolve}ms";
+            return $" Day {date}\n Part 1: {part1Score}\n Part 2: {part2Score}\n Time to solve: {timeToSolve}ms\n";
         }
     }
 

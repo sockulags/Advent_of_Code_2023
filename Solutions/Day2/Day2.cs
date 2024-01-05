@@ -1,13 +1,8 @@
 ﻿using SockulagsClassLibrary;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Advent_of_Code_2023.Solutions.Day2
+
+namespace Advent_of_Code_2023.Solutions
 {
     public class Day2
     {

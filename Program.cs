@@ -1,5 +1,4 @@
-﻿using Advent_of_Code_2023.Solutions.Day1;
-using Advent_of_Code_2023.Solutions.Day2;
+﻿using Advent_of_Code_2023.Solutions;
 
 namespace Advent_of_Code_2023
 {
@@ -9,6 +8,7 @@ namespace Advent_of_Code_2023
         {
             Console.WriteLine(new Day1());
             Console.WriteLine(new Day2());
+            Console.WriteLine(new Day3());
 
         }
               
