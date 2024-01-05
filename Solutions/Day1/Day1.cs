@@ -12,10 +12,11 @@ namespace Advent_of_Code_2023.Solutions.Day1
     public class Day1
     {
         static readonly int Date = 1;
+        string InputSource = $"Day{Date}";
         public override string ToString()
         {
             Stopwatch sw = Stopwatch.StartNew();
-            string[] input = FileHelper.ReadInput("Day1");
+            string[] input = FileHelper.ReadInput(InputSource);
             long p1 = SolvePartOne(input);
             long p2 = SolvePartTwo(input);
 
