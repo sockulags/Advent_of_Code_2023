@@ -33,9 +33,6 @@
     <Folder Include="Solutions\Day9\" />
     <Folder Include="Solutions\Day8\" />
     <Folder Include="Solutions\Day7\" />
-    <Folder Include="Solutions\Day6\" />
-    <Folder Include="Solutions\Day5\" />
-    <Folder Include="Solutions\Day4\" />
     <Folder Include="Utils\" />
   </ItemGroup>
 
