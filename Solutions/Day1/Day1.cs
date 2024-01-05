@@ -11,16 +11,15 @@ namespace Advent_of_Code_2023.Solutions.Day1
 {
     public class Day1
     {
-        public override string ToString() => Solution();
-  
-        static string Solution()
+        static readonly int Date = 1;
+        public override string ToString()
         {
             Stopwatch sw = Stopwatch.StartNew();
             string[] input = FileHelper.ReadInput("Day1");
             long p1 = SolvePartOne(input);
             long p2 = SolvePartTwo(input);
 
-            return $"[Day 1] Part 1: {p1}, Part 2: {p2}, time to solve: {sw.ElapsedMilliseconds}ms";
+            return Day.Answer(Date, p1, p2, sw.ElapsedMilliseconds);
         }
 
         static long SolvePartOne(string[] input)
