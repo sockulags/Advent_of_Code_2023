@@ -23,43 +23,27 @@ namespace Advent_of_Code_2023.Solutions
 
             return Day.Answer(Date, p1, p2, sw.ElapsedMilliseconds);
         }
-        public int extraLoops = 0;
-        public int score = 0;
+
         private long SolvePartTwo(string[] input)
         {
-            List<string> inputloop = [.. input];
-            ScoreCounter(inputloop, inputloop.Count(), 0);
-            return score;
-        }
-        public void ScoreCounter(List<string> inputloop, int loops, int startValue)
-        {
-            for (int i = startValue; i < loops + startValue; i++)
+            int[] scratchCards = new int[input.Length];
+            for (int i = 0; i < input.Length; i++)
             {
-                extraLoops = 0;
-                string[] data = inputloop[i].Replace(" ", ".").Split(':', '|');
-                string[] winningNrs = data[1].Split('.');
-                string[] ticketNrs = data[2].Split('.');
+                scratchCards[i] = scratchCards[i] + 1;
+                int extraCards = 0;
+                string[] data = input[i].Replace(" ", ".").Split(':', '|');
+                string[] winningNrs = data[1].Split('.').Where(s => !string.IsNullOrEmpty(s)).ToArray();
+                string[] ticketNrs = data[2].Split('.').Where(s => !string.IsNullOrEmpty(s)).ToArray();
 
-                for (int j = 0; j < winningNrs.Length; j++)
+                extraCards = winningNrs.Count(number => ticketNrs.Contains(number));
+
+                for (int x = i + 1; x <= i + extraCards; x++)
                 {
-                    if (winningNrs[j].Length > 0)
-                    {
-                        for (int k = 0; k < ticketNrs.Length; k++)
-                        {
-                            if (winningNrs[j] == ticketNrs[k])
-                            {
-                                ticketNrs[k] = "";
-                                extraLoops++;
-                            }
-                        }
-                    }
+                    scratchCards[x] += scratchCards[i];
                 }
-                score++;
-                if (extraLoops > 0)
-                    ScoreCounter(inputloop, extraLoops, i + 1);
             }
+            return scratchCards.Sum();
         }
-
         private long SolvePartOne(string[] input)
         {
             int currentScore = 0;
@@ -67,23 +51,10 @@ namespace Advent_of_Code_2023.Solutions
             foreach (var line in input)
             {
                 string[] data = line.Replace(" ", ".").Split(':', '|');
-                string[] winningNrs = data[1].Split('.');
-                string[] nrs = data[2].Split('.');
+                string[] winningNrs = data[1].Split('.').Where(s => !string.IsNullOrEmpty(s)).ToArray();
+                string[] ticketNrs = data[2].Split('.').Where(s => !string.IsNullOrEmpty(s)).ToArray();
 
-                foreach (var win in winningNrs)
-                {
-                    if (win.Length > 0)
-                        foreach (var nr in nrs)
-                        {
-                            if (nr == win)
-                            {
-                                nrs.Where(x => x == nr).First().Replace(nr, "00");
-                                currentScore += currentScore == 0 ? 1 : currentScore;
-                            }
-                        }
-                }
-                score += currentScore;
-                currentScore = 0;
+                score += (int)Math.Pow(2, winningNrs.Count(number => ticketNrs.Contains(number)) - 1);
             }
             return score;
         }
