@@ -16,6 +16,7 @@ namespace Advent_of_Code_2023
             Console.WriteLine(new Day7());
             Console.WriteLine(new Day8());
             Console.WriteLine(new Day9());
+            Console.WriteLine(new Day10());
 
         }
               
