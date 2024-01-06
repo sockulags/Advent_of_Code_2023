@@ -14,25 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Solutions\Day11\" />
-    <Folder Include="Solutions\Day12\" />
-    <Folder Include="Solutions\Day13\" />
-    <Folder Include="Solutions\Day14\" />
-    <Folder Include="Solutions\Day15\" />
-    <Folder Include="Solutions\Day16\" />
-    <Folder Include="Solutions\Day17\" />
-    <Folder Include="Solutions\Day18\" />
-    <Folder Include="Solutions\Day19\" />
-    <Folder Include="Solutions\Day20\" />
-    <Folder Include="Solutions\Day21\" />
-    <Folder Include="Solutions\Day22\" />
-    <Folder Include="Solutions\Day23\" />
-    <Folder Include="Solutions\Day25\" />
-    <Folder Include="Solutions\Day24\" />
-    <Folder Include="Solutions\Day10\" />
-    <Folder Include="Solutions\Day9\" />
-    <Folder Include="Solutions\Day8\" />
-    <Folder Include="Solutions\Day7\" />
     <Folder Include="Utils\" />
   </ItemGroup>
 
