@@ -1,6 +1,6 @@
 # Advent of Code 2023
 
-### Day 1: Done 
+### Day 1: ✅
 First and last digit part 1. String replace on part 2 , eg. one = o1e, etc. Needed to keep first and last letter to handle cases like eightwothree.
 ### Day 2: Done
 Part 1: Check if all conditions are met. If true, add ID to a score.
