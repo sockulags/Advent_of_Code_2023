@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Advent_of_Code_2023.HelperClass
     {
-    public static class Utils
+    public static class Maths
     {
         static long GreatestCommonFactor(long n1, long n2)
         {
